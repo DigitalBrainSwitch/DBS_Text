@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DBSDiary/DBSDiary.iml" filepath="$PROJECT_DIR$/DBSDiary/DBSDiary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBSDiaryProject.iml" filepath="$PROJECT_DIR$/DBSDiaryProject.iml" />
+    </modules>
+  </component>
+</project>
+

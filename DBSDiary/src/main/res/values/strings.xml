@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DBS Diary</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- DBS URL -->
+    <string name="dbs_url">http://digitalbrainswitch.co.uk/</string>
+    <string name="main_activity_add_diary_entry">Add A Diary Entry</string>
+    <string name="main_activity_view_diary_entry">View Recorded Entries</string>
+
+    <!-- Menu Strings -->
+    <string name="menu_about">About</string>
+
+    <!-- About Text -->
+    <string name="text_about">        Digital Brain Switch (DBS) is a project funded by the Engineering and Physical Sciences Research Council (EPSRC), which brings together computer science and social science. It is a collaboration between Lancaster University; The Open University; Royal Holloway, University of London; and University of Kent. The project is led by Prof. Jon Whittle from the School of Computing &amp; Communications at Lancaster University.
+        \n\nEmail: DBS-Project@open.ac.uk</string>
+    <string name="text_version">0.1</string>
+    <string name="title_activity_about">About</string>
+
+</resources>
