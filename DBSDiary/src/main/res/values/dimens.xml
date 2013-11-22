@@ -5,6 +5,7 @@
 
     <dimen name="textview_font_size">20sp</dimen>
 
-    <dimen name="main_activity_ui_padding">10dp</dimen>>
+    <dimen name="main_activity_ui_padding">10dp</dimen>
+    <dimen name="main_activity_imagebutton_padding_side">30dp</dimen>
 
 </resources>

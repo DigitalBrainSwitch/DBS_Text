@@ -18,5 +18,15 @@
         \n\nEmail: DBS-Project@open.ac.uk</string>
     <string name="text_version">0.1</string>
     <string name="title_activity_about">About</string>
+    <string name="title_activity_calendar_date_picker">Calendar Date Picker</string>
+    <string name="title_activity_add_diary_entry">Add Diary Entry</string>
+
+    <!-- Add Diary Entry -->
+    <string name="add_diary_date_string">Date:</string>
+    <string name="add_diary_time_string">Time:</string>
+    <string name="add_diary_location_string">Address:</string>
+    <string name="diary_button_add_string">Add Diary Entry</string>
+    <string name="diary_button_update_string">Update Diary Entry</string>
+    <string name="title_activity_map">Map</string>
 
 </resources>

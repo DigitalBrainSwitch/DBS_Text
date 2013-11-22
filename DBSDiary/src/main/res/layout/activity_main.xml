@@ -9,7 +9,15 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:background="#00000000"
-        android:layout_height="25dip"></LinearLayout>
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DateTime"
+            android:id="@+id/tvMainDateTime"
+            android:textSize="@dimen/textview_font_size" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
@@ -26,8 +34,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/ibAddEntry"
         android:src="@drawable/write_200x200"
-        android:layout_marginLeft="@dimen/main_activity_ui_padding"
-        android:layout_marginRight="@dimen/main_activity_ui_padding" />
+        android:layout_marginLeft="@dimen/main_activity_imagebutton_padding_side"
+        android:layout_marginRight="@dimen/main_activity_imagebutton_padding_side" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -51,8 +59,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/ibReadEntry"
         android:src="@drawable/read_200x200"
-        android:layout_marginLeft="@dimen/main_activity_ui_padding"
-        android:layout_marginRight="@dimen/main_activity_ui_padding" />
+        android:layout_marginLeft="@dimen/main_activity_imagebutton_padding_side"
+        android:layout_marginRight="@dimen/main_activity_imagebutton_padding_side" />
 
     <LinearLayout
         android:orientation="vertical"
