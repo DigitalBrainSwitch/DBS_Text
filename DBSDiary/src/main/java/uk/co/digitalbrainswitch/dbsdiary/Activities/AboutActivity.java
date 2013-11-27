@@ -1,4 +1,4 @@
-package uk.co.digitalbrainswitch.dbsdiary;
+package uk.co.digitalbrainswitch.dbsdiary.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,6 +8,9 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+
+import uk.co.digitalbrainswitch.dbsdiary.MyApplication;
+import uk.co.digitalbrainswitch.dbsdiary.R;
 
 public class AboutActivity extends Activity {
 

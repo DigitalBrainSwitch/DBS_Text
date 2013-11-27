@@ -10,7 +10,7 @@
 
     <!-- permissions -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,7 +29,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="uk.co.digitalbrainswitch.dbsdiary.MainActivity"
+            android:name="uk.co.digitalbrainswitch.dbsdiary.Activities.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,16 +38,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="uk.co.digitalbrainswitch.dbsdiary.AboutActivity"
+            android:name="uk.co.digitalbrainswitch.dbsdiary.Activities.AboutActivity"
             android:label="@string/title_activity_about"
             android:theme="@android:style/Theme.Holo.Light.Dialog" >
         </activity>
         <activity
-            android:name="uk.co.digitalbrainswitch.dbsdiary.CalendarDatePickerActivity"
+            android:name="uk.co.digitalbrainswitch.dbsdiary.Activities.CalendarDatePickerActivity"
             android:label="@string/title_activity_calendar_date_picker" >
         </activity>
         <activity
-            android:name="uk.co.digitalbrainswitch.dbsdiary.AddDiaryEntryActivity"
+            android:name="uk.co.digitalbrainswitch.dbsdiary.Activities.AddDiaryEntryActivity"
             android:label="@string/title_activity_add_diary_entry" >
         </activity>
 
@@ -56,8 +56,12 @@
             android:value="AIzaSyABAypjjVwhdEoSXbIRfbU2KD83cJ3LX9c" />
 
         <activity
-            android:name="uk.co.digitalbrainswitch.dbsdiary.MapActivity"
+            android:name="uk.co.digitalbrainswitch.dbsdiary.Activities.MapActivity"
             android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name=".Activities.UpdateDiaryEntryActivity"
+            android:label="@string/title_activity_update_diary_entry" >
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package uk.co.digitalbrainswitch.dbsdiary;
+package uk.co.digitalbrainswitch.dbsdiary.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import uk.co.digitalbrainswitch.dbsdiary.MyApplication;
+import uk.co.digitalbrainswitch.dbsdiary.R;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -42,7 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((TextView) findViewById(R.id.tvReadDiaryEntry)).setTypeface(font);
         tvMainDateTime = (TextView) findViewById(R.id.tvMainDateTime);
         tvMainDateTime.setTypeface(font);
-        timerHandler.postDelayed(dateTimeRunnable, 1000);
+        timerHandler.post(dateTimeRunnable);
         ibAddEntry = (ImageButton) findViewById(R.id.ibAddEntry);
         ibAddEntry.setOnClickListener(this);
         ibReadEntry = (ImageButton) findViewById(R.id.ibReadEntry);

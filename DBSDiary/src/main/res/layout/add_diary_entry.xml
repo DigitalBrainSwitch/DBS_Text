@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="XXXX XXXX XXXX"
+                android:text="detecting location ..."
                 android:id="@+id/tvDiaryLocation"
                 android:layout_gravity="left|center_vertical"
                 android:textSize="@dimen/textview_font_size"
