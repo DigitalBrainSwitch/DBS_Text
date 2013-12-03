@@ -36,7 +36,7 @@
 
     <!-- Add Diary Error/Warning Messages -->
     <string name="diary_empty_alert_title">Cannot Save Diary Entry</string>
-    <string name="diary_empty_alert_message">Content of a diary cannot be empty. Please enter content.</string>
+    <string name="diary_empty_alert_message">Content of a diary entry cannot be empty. Please enter content.</string>
     <string name="diary_entry_empty_latitude">NO_LATITUDE</string>
     <string name="diary_entry_empty_longitude">NO_LONGITUDE</string>
 

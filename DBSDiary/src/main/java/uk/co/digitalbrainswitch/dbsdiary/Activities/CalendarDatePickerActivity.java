@@ -87,7 +87,7 @@ public class CalendarDatePickerActivity extends Activity implements AdapterView.
         JSONObject diaryJSONObject = parseJSONData(diaryEntryFile);
 
         if (diaryJSONObject != null) {
-            Toast.makeText(getApplicationContext(), diaryJSONObject.toString(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), diaryJSONObject.toString(), Toast.LENGTH_LONG).show();
 
             try {
                 String diaryDate = diaryJSONObject.getString(getString(R.string.diary_data_key_date));
@@ -109,6 +109,8 @@ public class CalendarDatePickerActivity extends Activity implements AdapterView.
                 intent.putExtra(IntentExtraKeys.DIARY_ENTRY_CREATED_TIME, diaryCreatedTime);
                 intent.putExtra(IntentExtraKeys.DIARY_ENTRY_LOCATION_LATITUDE, diaryLatitude);
                 intent.putExtra(IntentExtraKeys.DIARY_ENTRY_LOCATION_LONGITUDE, diaryLongitude);
+                intent.putExtra(IntentExtraKeys.DIARY_ENTRY_FILE_NAME, fileName);
+                intent.putExtra(IntentExtraKeys.DIARY_ENTRY_DIRECTORY_NAME, directoryName);
 
                 startActivity(intent);
 
