@@ -39,6 +39,7 @@
     <string name="diary_empty_alert_message">Content of a diary entry cannot be empty. Please enter content.</string>
     <string name="diary_entry_empty_latitude">NO_LATITUDE</string>
     <string name="diary_entry_empty_longitude">NO_LONGITUDE</string>
+    <string name="diary_entry_empty_address">Location Error</string>
 
     <!-- JSON strings -->
     <string name="diary_data_key_date">DIARY_ENTRY_DATE</string>

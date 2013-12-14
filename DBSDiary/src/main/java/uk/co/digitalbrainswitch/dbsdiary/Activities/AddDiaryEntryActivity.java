@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -228,6 +229,8 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
     @Override
     public void onLocationChanged(Location location) {
         currentLocation = location;
+        //stop update after a location is received
+        stopPeriodicUpdates();
     }
 
     //Handle and Runnable to display location on UI
@@ -242,14 +245,16 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
                 //tvDiaryLocation.append(latLng.latitude + ", " + latLng.longitude);
                 bMapView.setEnabled(true);
             } else
-                tvDiaryLocation.setText("Location error");
+                tvDiaryLocation.setText(getString(R.string.diary_entry_empty_address));
         }
     };
 
     @Override
     public void onConnected(Bundle bundle) {
         if (mUpdatesRequested) {
+
             startPeriodicUpdates();
+
 
             Thread thread = new Thread(new Runnable() {
                 @Override
@@ -278,8 +283,6 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
                     mUpdatesRequested = false;
                     handler.post(updateUI);
 
-                    //stop update after a location is received
-                    stopPeriodicUpdates();
                     //reset current location
                     currentLocation = null;
                 }
@@ -465,7 +468,9 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
         jsonObject.put(getString(R.string.diary_data_key_content), diaryContent);
         long currentTime = System.currentTimeMillis();
         jsonObject.put(getString(R.string.diary_data_key_last_updated_time), currentTime);
-        jsonObject.put(getString(R.string.diary_data_key_created_time), (isAddFunction) ? currentTime : createdTime);
+        long createdTimeLong = Long.parseLong(createdTime);
+        jsonObject.put(getString(R.string.diary_data_key_created_time), (isAddFunction) ? currentTime : createdTimeLong);
+//        jsonObject.put(getString(R.string.diary_data_key_created_time), (isAddFunction) ? currentTime : createdTime);
 
         jsonObject.put(getString(R.string.diary_data_key_location_latitude), diaryLatitude);
         jsonObject.put(getString(R.string.diary_data_key_location_longitude), diaryLongitude);
