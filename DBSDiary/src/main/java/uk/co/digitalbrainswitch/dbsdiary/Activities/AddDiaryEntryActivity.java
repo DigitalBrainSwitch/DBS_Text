@@ -1,6 +1,7 @@
 package uk.co.digitalbrainswitch.dbsdiary.Activities;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -39,6 +40,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -77,7 +80,6 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
     private Location detectedLocation = null;
 
     private long DiaryEntryTime = -1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -255,7 +257,6 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
 
             startPeriodicUpdates();
 
-
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -375,6 +376,7 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+//            Log.e("NETWORK", netInfo.toString());
             return true;
         }
         return false;
@@ -408,7 +410,7 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
         return formatter.format(calendar.getTime());
     }
 
-    private void saveDiaryEntry(){
+    private void saveDiaryEntry() {
         File root = Environment.getExternalStorageDirectory();
         File diaryDirectory = new File(root + getString(R.string.stored_diary_directory) + "/" + _diaryFileDate);
 
@@ -445,7 +447,7 @@ public class AddDiaryEntryActivity extends Activity implements LocationListener,
                                 tvDiaryLocation.getText().toString(),
                                 etDiaryText.getText().toString(),
                                 System.currentTimeMillis() + "",
-                                (detectedLocation != null) ? detectedLocation.getLatitude() + "" : getString(R.string.diary_entry_empty_latitude) ,
+                                (detectedLocation != null) ? detectedLocation.getLatitude() + "" : getString(R.string.diary_entry_empty_latitude),
                                 (detectedLocation != null) ? detectedLocation.getLongitude() + "" : getString(R.string.diary_entry_empty_longitude)
                         )
                 );

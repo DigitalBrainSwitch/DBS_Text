@@ -242,9 +242,10 @@ public class UpdateDiaryEntryActivity extends Activity implements View.OnClickLi
                 FileWriter filewriter = new FileWriter(file, false);
                 BufferedWriter out = new BufferedWriter(filewriter);
                 out.write(
-                        writeUsingJSON(_diaryDate,
-                                _diaryTime,
-                                _diaryLocation,
+                        writeUsingJSON(
+                                tvDiaryDate.getText().toString(),
+                                tvDiaryTime.getText().toString(),
+                                tvDiaryLocation.getText().toString(),
                                 etDiaryText.getText().toString(),
                                 _diaryCreatedtime,
                                 _diaryLatitude,
